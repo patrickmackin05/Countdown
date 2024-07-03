@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: maroon;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+
+
+.blur{
+    justify-items: center;
+    max-height: min-content;
+    max-width: 300px;
+    margin: 40px;
+    padding: 20px;
+    border: solid thick blue;
+    background-color: blue;
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container .mytitle{
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}

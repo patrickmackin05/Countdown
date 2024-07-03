@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown Game</title>
+    <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Countdown Game</h1>
+        <button id="consonantBtn">Add Consonant</button>
+        <button id="vowelBtn">Add Vowel</button>
+        <div id="letters"></div>
+        <input type="text" id="answer" placeholder="Enter your word" disabled>
+        <button id="submit" disabled>Submit Word</button>
+        <div id="timer"></div>
+        <div id="wordList"></div>
+        <div id="score"></div>
+        <button id="playAgain" style="display: none;">Play Again</button>
+        <div id="countdown" class="countdown">
+            <span id="countdownNumber"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
