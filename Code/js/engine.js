@@ -172,3 +172,11 @@ function startGame() {
     timerDiv.style.display = 'block';
     startTimer();
 }
+
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        const sound = document.getElementById('buttonSound');
+        sound.currentTime = 0; // Rewind to the start
+        sound.play();
+    });
+});
