@@ -16,8 +16,7 @@ function addLetter(letter) {
     if (lettersChosen < maxLetters) {
         lettersArray.push(letter);
         const letterElement = document.createElement('span');
-        letterElement.classList.add('letter', 'letter-animate');
-        letterElement.style.animationDelay = `${lettersChosen * 0.2}s`; // Adjust delay based on order
+        letterElement.classList.add('letter'); // This class now includes the lottery effect
         letterElement.textContent = letter;
         lettersDiv.appendChild(letterElement);
         lettersChosen++;
@@ -139,25 +138,27 @@ playAgainBtn.addEventListener('click', () => {
     timerDiv.textContent = ''; // Clear the timer display
     timerDiv.style.display = 'none'; // Hide timer display
     lettersDiv.innerHTML = ''; // Clear the letters
-    wordListDiv.innerHTML = ''; // Clear the word list
-    scoreDiv.textContent = ''; // Clear the score
+    document.getElementById('wordList').innerHTML = ''; // Clear the word list
+    document.getElementById('score').textContent = ''; // Clear the score
     answerInput.disabled = true; // Disable input until letters are chosen
     submitBtn.disabled = true; // Disable submit button until game starts
-    playAgainBtn.style.display = 'none'; // Hide the play again button
+    playAgainBtn.style.display = 'none'; // Hide the play again button immediately after it is clicked
     playAgainBtn.classList.remove('fade-in');
 });
+
 
 function showCountdown() {
     let countdownValue = 3;
     const countdownElement = document.getElementById('countdownNumber');
     const countdownContainer = document.getElementById('countdown');
     countdownContainer.style.display = 'flex'; // Show the countdown
+    countdownElement.textContent = countdownValue; // Reset the countdown display to 3
 
     const countdownInterval = setInterval(() => {
-        countdownElement.textContent = countdownValue;
         countdownValue--;
-
-        if (countdownValue < 0) {
+        if (countdownValue >= 0) {
+            countdownElement.textContent = countdownValue;
+        } else {
             clearInterval(countdownInterval);
             countdownContainer.style.display = 'none'; // Hide the countdown
             startGame(); // Start the game
