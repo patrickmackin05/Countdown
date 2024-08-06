@@ -1,38 +1,86 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap');
+/* Global styles */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: maroon;
-}
-
-nav{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin: 30px;
-    padding: 20px;
-    justify-items: center;
-}
-
-
-.blur{
-    justify-items: center;
-    max-height: min-content;
-    max-width: 300px;
-    margin: 40px;
-    padding: 20px;
-    border: solid thick blue;
-    background-color: blue;
-    color: yellow;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.container .mytitle{
     display: flex;
     justify-content: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    align-items: center;
+    background-color: #f0f0f0; /* Match the game background */
+    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
+}
+
+.container {
+    text-align: center; /* Center the content */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mytitle {
+    margin-bottom: 20px; /* Space between title and menu */
+    font-size: 2em; /* Larger title */
+    color: #333; /* Darker text for better readability */
+}
+
+.back-button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blur {
+    display: block; /* Make links block-level for easier centering */
+    margin: 10px 0; /* Space out the links */
+    padding: 15px 30px; /* Larger hit area */
+    background-color: #4CAF50; /* Use the game's button color */
+    color: white; /* Contrast text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners like the game buttons */
+    font-size: 1.2em; /* Larger text */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+    .blur:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+
+.fade-out {
+    animation: fadeOutAnimation 0.5s;
+    animation-fill-mode: forwards; /* Keeps the element in the state of the last animation frame */
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

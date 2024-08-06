@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="game">
+        <a href="index.html" class="button blur back-button">Back</a>
         <h1>Countdown Game</h1>
         <button id="consonantBtn">Add Consonant</button>
         <button id="vowelBtn">Add Vowel</button>
@@ -16,10 +17,19 @@
         <div id="timer"></div>
         <div id="wordList"></div>
         <div id="score"></div>
-        <button id="playAgain" style="display: none;">Play Again</button>
+        <div id="gameEndPopup" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Game Over!</h2>
+                <div id="finalWordsList"></div>
+                <div id="finalScore"></div>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </div>
         <div id="countdown" class="countdown">
             <span id="countdownNumber"></span>
         </div>
+        <div id="notification" class="notification"></div>
         <audio id="buttonSound" src="sounds/button-press.mp3" preload="auto"></audio>
     </div>
     <script src="js/engine.js"></script>

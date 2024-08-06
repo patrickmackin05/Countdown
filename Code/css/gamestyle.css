@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap');
 /* Global styles */
 html, body {
     height: 100%;
@@ -7,6 +8,7 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0; /* Optional: background color for the body */
+    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
 }
 
 /* Updated #game styles for full screen */
@@ -102,6 +104,7 @@ button, input[type="text"] {
 
 .letter {
     display: inline-block;
+    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
     margin: 5px;
     padding: 20px; /* Adjust padding for the "ball" effect */
     animation: pulse 0.6s, lotteryEffect 0.8s ease-out; /* Apply both animations */
@@ -113,6 +116,7 @@ button, input[type="text"] {
 
 
 button {
+    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
     padding: 10px 20px;
     margin: 10px;
     border: none;
@@ -133,6 +137,7 @@ button {
     }
 
 input[type="text"] {
+    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -169,3 +174,99 @@ input[type="text"] {
     display: none;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+.fade-out {
+    animation: fadeOutAnimation 0.5s;
+    animation-fill-mode: forwards; /* Keeps the element in the state of the last animation frame */
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px; /* Match other buttons */
+    margin: 0; /* Override any default margins */
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Match other buttons' background color */
+    color: white; /* Match the text color of other buttons */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336; /* Red background for error */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+    .notification.show {
+        display: block; /* Show the notification */
+    }

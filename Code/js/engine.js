@@ -49,12 +49,10 @@ function startTimer() {
             clearInterval(timerInterval);
             answerInput.disabled = true;
             submitBtn.disabled = true;
-            calculateScore();
-            // Show play again button after 5 seconds
-            setTimeout(() => {
-                playAgainBtn.style.display = 'block';
-                playAgainBtn.classList.add('fade-in');
-            }, 5000);
+            calculateScore(); // Calculate final score and update word list
+            // Show the game end pop-up here, when the game actually ends
+            document.getElementById('gameEndPopup').style.display = 'block';
+            playAgainBtn.style.display = 'block';
         }
     }, 1000);
 }
@@ -62,9 +60,11 @@ function startTimer() {
 submitBtn.addEventListener('click', async () => {
     const word = answerInput.value.toUpperCase();
     if (word) {
+        submitBtn.disabled = true; // Disable the submit button immediately to prevent multiple submissions
         if (wordsSubmitted.includes(word)) {
-            alert('This word has already been submitted.');
+            showNotification('This word has already been submitted.');
             answerInput.value = ''; // Clear input
+            submitBtn.disabled = false; // Re-enable the submit button
             return; // Exit the function to prevent re-submission
         }
         const isValid = await isValidWord(word);
@@ -75,8 +75,9 @@ submitBtn.addEventListener('click', async () => {
             // Update the score and display the words with their scores
             calculateScore();
         } else {
-            alert('Invalid word or word cannot be formed from the given letters, or it does not exist in the dictionary.');
+            showNotification('Invalid word or word cannot be formed from the given letters, or it does not exist in the dictionary.');
         }
+        submitBtn.disabled = false; // Re-enable the submit button after validation
     }
 });
 
@@ -116,20 +117,39 @@ async function isValidWord(word) {
 
 function calculateScore() {
     let score = 0;
-    let wordListDiv = document.getElementById('wordList');
-    wordListDiv.innerHTML = ''; // Clear the word list before adding updated entries
+    const finalWordsList = document.getElementById('finalWordsList');
+    finalWordsList.innerHTML = ''; // Clear the word list
+
     wordsSubmitted.forEach(word => {
-        score += word.length; // Simple scoring: word length
+        let wordScore = 0;
+        let baseScorePerLetter = 1; // Base score for each letter
+        let lengthMultiplier = 1; // Default multiplier
+
+        if (word.length > 3) {
+            // Increase the multiplier for longer words
+            // For example, words longer than 3 letters get an additional 0.5 multiplier for each letter above 4
+            lengthMultiplier += (word.length - 4) * 0.5;
+        }
+
+        wordScore = word.length * baseScorePerLetter * lengthMultiplier;
+        score += wordScore;
+
+        // Update the display for each word with its score
         let wordElement = document.createElement('div');
-        wordElement.textContent = `${word} (${word.length} points)`; // Display word with its score
-        wordListDiv.appendChild(wordElement);
+        wordElement.textContent = `${word} (${wordScore} points)`;
+        finalWordsList.appendChild(wordElement);
     });
-    let scoreDiv = document.getElementById('score');
-    scoreDiv.textContent = `Score: ${score}`;
+
+    // Update the total score display
+    document.getElementById('finalScore').textContent = `Final Score: ${score}`;
 }
 
 
+
+
+
 playAgainBtn.addEventListener('click', () => {
+    document.getElementById('gameEndPopup').style.display = 'none';
     // Reset game state
     lettersChosen = 0;
     lettersArray = [];
@@ -139,11 +159,21 @@ playAgainBtn.addEventListener('click', () => {
     timerDiv.style.display = 'none'; // Hide timer display
     lettersDiv.innerHTML = ''; // Clear the letters
     document.getElementById('wordList').innerHTML = ''; // Clear the word list
+    document.getElementById('finalWordsList').innerHTML = ''; // Clear the final words list
     document.getElementById('score').textContent = ''; // Clear the score
+    document.getElementById('finalScore').textContent = ''; // Clear the final score
     answerInput.disabled = true; // Disable input until letters are chosen
     submitBtn.disabled = true; // Disable submit button until game starts
-    playAgainBtn.style.display = 'none'; // Hide the play again button immediately after it is clicked
-    playAgainBtn.classList.remove('fade-in');
+    consonantBtn.disabled = false; // Re-enable consonant button
+    vowelBtn.disabled = false; // Re-enable vowel button
+});
+
+
+
+// Close the pop-up when the user clicks on <span> (x)
+document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('gameEndPopup').style.display = 'none';
+    window.location.href = 'index.html';
 });
 
 
@@ -171,8 +201,11 @@ function startGame() {
     answerInput.disabled = false;
     submitBtn.disabled = false;
     timerDiv.style.display = 'block';
+    consonantBtn.disabled = true; // Disable consonant button
+    vowelBtn.disabled = true; // Disable vowel button
     startTimer();
 }
+
 
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', () => {
@@ -181,3 +214,27 @@ document.querySelectorAll('button').forEach(button => {
         sound.play();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+});
+
+document.querySelectorAll('.back-button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+        const target = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = target;
+        }, 500); // Match the duration of the fade-out animation
+    });
+});
+
+function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.classList.add('show');
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000); // Hide after 3 seconds
+}
