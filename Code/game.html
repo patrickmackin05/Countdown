@@ -23,6 +23,8 @@
                 <h2>Game Over!</h2>
                 <div id="finalWordsList"></div>
                 <div id="finalScore"></div>
+                <input type="text" id="playerName" placeholder="Enter your name">
+                <button id="saveScore">Save Score</button>
                 <button id="playAgain">Play Again</button>
             </div>
         </div>
@@ -30,7 +32,9 @@
             <span id="countdownNumber"></span>
         </div>
         <div id="notification" class="notification"></div>
-        <audio id="buttonSound" src="sounds/button-press.mp3" preload="auto"></audio>
+        <div id="successNotification" class="notification success"></div>
+        <audio id="buttonSound" src="sounds/button-press.mp3" preload="auto"></audio> <!-- "UI Confirmation Alert, B3.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org -->
+        <audio id="successSound" src="sounds/success.mp3" preload="auto"></audio> <!-- "Jingle_Achievement_00.wav" by LittleRobotSoundFactory of Freesound.org -->
     </div>
     <script src="js/engine.js"></script>
 </body>

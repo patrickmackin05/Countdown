@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\pmackin\\Documents\\Countdown\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\css\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\game.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\game.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\gamestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\css\\gamestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\mainMenu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\js\\mainMenu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\engine.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\js\\engine.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\css\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\gamestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\css\\gamestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\howToPlay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\js\\howToPlay.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\leaderboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Code\\js\\leaderboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,65 +70,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "mainMenu.js",
+              "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\mainMenu.js",
+              "RelativeDocumentMoniker": "Code\\js\\mainMenu.js",
+              "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\mainMenu.js",
+              "RelativeToolTip": "Code\\js\\mainMenu.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-08T09:07:42.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "howToPlay.js",
+              "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\howToPlay.js",
+              "RelativeDocumentMoniker": "Code\\js\\howToPlay.js",
+              "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\howToPlay.js",
+              "RelativeToolTip": "Code\\js\\howToPlay.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-08T08:49:01.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "leaderboard.js",
+              "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\leaderboard.js",
+              "RelativeDocumentMoniker": "Code\\js\\leaderboard.js",
+              "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\leaderboard.js",
+              "RelativeToolTip": "Code\\js\\leaderboard.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-08T08:31:29.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\index.html",
               "RelativeDocumentMoniker": "Code\\index.html",
               "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\index.html",
               "RelativeToolTip": "Code\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwDAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-07-03T14:17:35.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "indexstyle.css",
               "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\indexstyle.css",
               "RelativeDocumentMoniker": "Code\\css\\indexstyle.css",
               "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\indexstyle.css",
               "RelativeToolTip": "Code\\css\\indexstyle.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA+AAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-07-03T14:17:34.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "game.html",
               "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\game.html",
               "RelativeDocumentMoniker": "Code\\game.html",
               "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\game.html",
               "RelativeToolTip": "Code\\game.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAACiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-07-03T14:09:21.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "engine.js",
               "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\engine.js",
               "RelativeDocumentMoniker": "Code\\js\\engine.js",
               "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\js\\engine.js",
               "RelativeToolTip": "Code\\js\\engine.js",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAqwKkAAAAAAAAA",
+              "ViewState": "AQIAALYAAAAAAAAAAAAqwNQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-07-03T14:09:05.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "gamestyle.css",
               "DocumentMoniker": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\gamestyle.css",
               "RelativeDocumentMoniker": "Code\\css\\gamestyle.css",
               "ToolTip": "C:\\Users\\pmackin\\Documents\\Countdown\\Code\\css\\gamestyle.css",
               "RelativeToolTip": "Code\\css\\gamestyle.css",
-              "ViewState": "AQIAAGYAAAAAAAAAAADwv4UAAAAVAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAADwvxcBAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-07-03T14:08:16.003Z",
               "EditorCaption": ""

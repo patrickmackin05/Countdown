@@ -74,6 +74,7 @@ submitBtn.addEventListener('click', async () => {
 
             // Update the score and display the words with their scores
             calculateScore();
+            showNotification('Word submitted successfully!', true); // Show success notification
         } else {
             showNotification('Invalid word or word cannot be formed from the given letters, or it does not exist in the dictionary.');
         }
@@ -150,22 +151,21 @@ function calculateScore() {
 
 playAgainBtn.addEventListener('click', () => {
     document.getElementById('gameEndPopup').style.display = 'none';
-    // Reset game state
     lettersChosen = 0;
     lettersArray = [];
     wordsSubmitted = [];
-    timeLeft = 30; // Reset the timer
-    timerDiv.textContent = ''; // Clear the timer display
-    timerDiv.style.display = 'none'; // Hide timer display
-    lettersDiv.innerHTML = ''; // Clear the letters
-    document.getElementById('wordList').innerHTML = ''; // Clear the word list
-    document.getElementById('finalWordsList').innerHTML = ''; // Clear the final words list
-    document.getElementById('score').textContent = ''; // Clear the score
-    document.getElementById('finalScore').textContent = ''; // Clear the final score
-    answerInput.disabled = true; // Disable input until letters are chosen
-    submitBtn.disabled = true; // Disable submit button until game starts
-    consonantBtn.disabled = false; // Re-enable consonant button
-    vowelBtn.disabled = false; // Re-enable vowel button
+    timeLeft = 30;
+    timerDiv.textContent = '';
+    timerDiv.style.display = 'none';
+    lettersDiv.innerHTML = '';
+    document.getElementById('wordList').innerHTML = '';
+    document.getElementById('finalWordsList').innerHTML = '';
+    document.getElementById('score').textContent = '';
+    document.getElementById('finalScore').textContent = '';
+    answerInput.disabled = true;
+    submitBtn.disabled = true;
+    consonantBtn.disabled = false;
+    vowelBtn.disabled = false;
 });
 
 
@@ -197,15 +197,13 @@ function showCountdown() {
 }
 
 function startGame() {
-    // Your logic to start the game, e.g., enable inputs, start timer, etc.
     answerInput.disabled = false;
     submitBtn.disabled = false;
     timerDiv.style.display = 'block';
-    consonantBtn.disabled = true; // Disable consonant button
-    vowelBtn.disabled = true; // Disable vowel button
+    consonantBtn.disabled = true;
+    vowelBtn.disabled = true;
     startTimer();
 }
-
 
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', () => {
@@ -221,20 +219,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.back-button').forEach(button => {
     button.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent the default link behavior
+        e.preventDefault();
         const target = this.getAttribute('href');
         document.body.classList.add('fade-out');
         setTimeout(() => {
             window.location.href = target;
-        }, 500); // Match the duration of the fade-out animation
+        }, 500);
     });
 });
 
-function showNotification(message) {
-    const notification = document.getElementById('notification');
+function showNotification(message, isSuccess = false) {
+    const notification = isSuccess ? document.getElementById('successNotification') : document.getElementById('notification');
     notification.textContent = message;
     notification.classList.add('show');
+    if (isSuccess) {
+        const successSound = document.getElementById('successSound');
+        successSound.currentTime = 0; // Rewind to the start
+        successSound.play();
+    }
     setTimeout(() => {
         notification.classList.remove('show');
-    }, 3000); // Hide after 3 seconds
+    }, 3000);
 }
+
+async function saveScore(name, score) {
+    const leaderboardUrl = '/save-score';
+    try {
+        const response = await fetch(leaderboardUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, score })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save score');
+        }
+
+        showNotification('Score saved successfully!', true); // Show success notification
+
+        // Hide the name input field and save score button
+        document.getElementById('playerName').style.display = 'none';
+        document.getElementById('saveScore').style.display = 'none';
+    } catch (error) {
+        console.error('Error saving score:', error);
+        showNotification('Score Not Submitted');
+    }
+}
+
+document.getElementById('saveScore').addEventListener('click', () => {
+    const playerName = document.getElementById('playerName').value.trim();
+    const finalScore = parseInt(document.getElementById('finalScore').textContent.split(': ')[1]);
+
+    if (playerName && !isNaN(finalScore)) {
+        saveScore(playerName, finalScore);
+    } else {
+        showNotification('Please enter a valid name and score.');
+    }
+});

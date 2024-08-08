@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap');
-/* Global styles */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -7,12 +7,12 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Match the game background */
-    font-family: 'Roboto Serif', serif; /* Use Roboto Serif font */
+    background-color: #f0f0f0;
+    font-family: 'Roboto Serif', serif;
 }
 
 .container {
-    text-align: center; /* Center the content */
+    text-align: center;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -22,9 +22,9 @@ html, body {
 }
 
 .mytitle {
-    margin-bottom: 20px; /* Space between title and menu */
-    font-size: 2em; /* Larger title */
-    color: #333; /* Darker text for better readability */
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
 }
 
 .back-button-container {
@@ -40,24 +40,24 @@ nav {
 }
 
 .blur {
-    display: block; /* Make links block-level for easier centering */
-    margin: 10px 0; /* Space out the links */
-    padding: 15px 30px; /* Larger hit area */
-    background-color: #4CAF50; /* Use the game's button color */
-    color: white; /* Contrast text color */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 5px; /* Rounded corners like the game buttons */
-    font-size: 1.2em; /* Larger text */
-    transition: background-color 0.3s; /* Smooth background transition */
+    display: block;
+    margin: 10px 0;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
 }
 
     .blur:hover {
-        background-color: #45a049; /* Darker green on hover */
+        background-color: #45a049;
     }
 
 .fade-out {
     animation: fadeOutAnimation 0.5s;
-    animation-fill-mode: forwards; /* Keeps the element in the state of the last animation frame */
+    animation-fill-mode: forwards;
 }
 
 .fade-in {
@@ -84,3 +84,64 @@ nav {
         opacity: 1;
     }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#leaderboardList {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    #leaderboardList div {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+
+    }
+
+        #leaderboardList div:last-child {
+            border-bottom: none;
+        }
+
+        #leaderboardList div:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        #leaderboardList div:nth-child(even) {
+            background-color: #fff;
+        }
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

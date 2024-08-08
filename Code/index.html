@@ -13,34 +13,47 @@
         </div>
 
         <div class="maincontent">
-
             <div class="panel">
                 <nav>
                     <a class="blur" href="game.html">Play Game</a>
-                    <a class="blur" href="leaderboard/leaderboard.html">Leaderboards</a>
-                    <a class="blur" href="instructions.html">How To Play</a>
+                    <a class="blur" id="leaderboardLink" href="#">Leaderboards</a>
+                    <a class="blur" id="howToPlayLink" href="#">How To Play</a>
                 </nav>
             </div>
         </div>
     </div>
-    <script src="js/engine.js"></script>
-    <script>
-        document.querySelectorAll('.blur').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent the default link behavior
-                const target = this.getAttribute('href');
-                document.body.classList.add('fade-out');
-                setTimeout(() => {
-                    window.location.href = target;
-                }, 500); // Match the duration of the fade-out animation
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('fade-in');
-        });
-    </script>
 
+    <!-- Leaderboard Pop-up -->
+    <div id="leaderboardPopup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leaderboard</h2>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+
+    <!-- How to Play Pop-up -->
+    <div id="howToPlayPopup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Welcome to Countdown! Here are the rules:</p>
+            <ul>
+                <li>Click "Add Consonant" or "Add Vowel" to select letters. You can choose up to 9 letters.</li>
+                <li>Once 9 letters are chosen, a 30-second countdown will start.</li>
+                <li>During the countdown, form the longest word you can using the selected letters.</li>
+                <li>Type your word in the input field and click "Submit Word" or press Enter.</li>
+                <li>Each valid word will be scored based on its length and displayed in the word list.</li>
+                <li>When the timer ends, the game will display your final score and the words you submitted.</li>
+                <li>Enter your name and click "Save Score" to save your score to the leaderboard.</li>
+                <li>Click "Play Again" to start a new game.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/engine.js"></script>
+    <script src="js/mainMenu.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/howToPlay.js"></script>
 </body>
 </html>
