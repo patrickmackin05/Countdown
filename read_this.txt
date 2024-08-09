@@ -1,0 +1,5 @@
+Should any files unfortunately get corruped, please find all the files at the following link: https://github.com/patrickmackin05/Countdown
+
+Credits:
+Button Sound - "UI Confirmation Alert, B3.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+Success Sound - "Jingle_Achievement_00.wav" by LittleRobotSoundFactory of Freesound.org
